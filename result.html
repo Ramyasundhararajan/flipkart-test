@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+</head>
+<body>
+    <h1>Sentiment Analysis Result</h1>
+    
+    <table border="1">
+        <tr>
+            <th>Review</th>
+            <th>Sentiment</th>
+            <th>Elapsed Time</th>
+        </tr>
+        {% for sentiment in all_sentiments %}
+        <tr>
+            <td>{{ sentiment[0] }}</td>
+            <td>{{ sentiment[1] }}</td>
+            <td>{{ sentiment[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

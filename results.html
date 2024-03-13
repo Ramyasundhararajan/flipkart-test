@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7eaf6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .result-container {
+            max-width: 800px;
+            padding: 70px;
+            background-color: #cdf5f1;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(124, 100, 100, 0.1);
+            text-align: center;
+        }
+        .positive {
+            color:white; /* Green background for positive sentiment */
+            background-color: #07c807; /* Dark green text */
+        }
+        .negative {
+            color:black; /* Red background for negative sentiment */
+            background-color: #f73535; /* Dark red text */
+        }
+    </style>
+</head>
+<body>
+    <h1>Sentiment Analysis Result  :</h1>
+    <div class="result-container {{ sentiment | lower }}">
+        <p>Input Text: {{ input_url }}</p>
+        <p>{{ sentiment }}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #a7aef9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            padding: 70px;
+            background-color: #f6dbf9;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(124, 100, 100, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        textarea {
+            margin-bottom: 10px;
+        }
+        input {
+            background-color: #8051f7; /* Green background color for the button */
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Sentiment Analysis</h1>
+        <p>Enter url for sentiment analysis:</p>
+        <form action="/predict_flikart" method = "post">
+            <textarea name="input_url" rows="4" cols="50"></textarea><br><br>
+            <input type="submit" class="btn btn-primary" value="Predict Sentiment">
+        </form>
+    </div>
+</body>
+</html>
